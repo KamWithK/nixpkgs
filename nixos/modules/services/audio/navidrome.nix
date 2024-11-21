@@ -130,13 +130,9 @@ in
             '';
             User = cfg.user;
             Group = cfg.group;
-            StateDirectory = "navidrome";
-            inherit WorkingDirectory;
-            StateDirectoryMode = 750;
+            StateDirectory = baseNameOf rootDir;
             RuntimeDirectory = baseNameOf rootDir;
-            RootDirectoryStartOnly = true;
-            RuntimeDirectoryMode = "755";
-            ReadWritePaths = "";
+            inherit WorkingDirectory;
             BindPaths =
               [
                 "${WorkingDirectory}"
