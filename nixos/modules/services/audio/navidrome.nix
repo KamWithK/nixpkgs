@@ -133,6 +133,7 @@ in
             StateDirectory = baseNameOf rootDir;
             RuntimeDirectory = baseNameOf rootDir;
             inherit WorkingDirectory;
+            MountAPIVFS = true;
             BindPaths =
               [
                 "${WorkingDirectory}"
